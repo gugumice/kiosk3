@@ -21,6 +21,6 @@ apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-pa
 echo 'KERNEL=="watchdog", MODE="0660", GROUP="watchdog"' > /etc/udev/rules.d/60-watchdog.rules
 sed '/^#NTP=.*/a FallbackNTP=laiks.egl.local' /etc/systemd/timesyncd.conf
 chattr -i /etc/hosts
-echo '10.100.20.104   laiks.egl.local' > /etc/hosts
+echo '10.100.20.104   laiks.egl.local' >> /etc/hosts
 chattr +i /etc/hosts
 pip3 --no-input install pycups pycurl pyserial configparser
