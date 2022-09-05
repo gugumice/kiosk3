@@ -16,7 +16,8 @@ usermod -a -G lpadmin pi
 addgroup watchdog
 usermod -a -G watchdog pi
 service cups restart
-apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages install python3-pip
+apt-get --yes install python3-pip
+#apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages install python3-pip
 echo 'KERNEL=="watchdog", MODE="0660", GROUP="watchdog"' > /etc/udev/rules.d/60-watchdog.rules
 sed -i '/^#NTP=.*/a FallbackNTP=laiks.egl.local' /etc/systemd/timesyncd.conf
 chattr -i /etc/hosts
