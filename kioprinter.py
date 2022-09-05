@@ -85,7 +85,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG)
     plist={'HP':'HP LaserJet Series PCL 6 CUPS','Epson':'Epson driver'}
     p=kioPrinter(plist,testpage=True)
-
+    
     while not p.running:
         print('p',)
         p.start()

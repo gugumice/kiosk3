@@ -13,7 +13,7 @@ import sys,re,os
 wdObj=None
 
 def main():
-    logging.basicConfig(format='%(asctime)s - %(message)s',filename='/home/pi/kiosk.log',filemode='w',level=logging.DEBUG)
+    logging.basicConfig(format='%(asctime)s - %(message)s',filename='/home/pi/kiosk.log',filemode='w',level=logging.INFO)
     #logging.basicConfig(format='%(asctime)s - %(message)s',level=logging.DEBUG)
     global wdObj
     def make_URL(bar_code):
