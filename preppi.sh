@@ -3,6 +3,7 @@
 sudo raspi-config nonint do_memory_16
 systemctl disable bluetooth.service
 systemctl disable hciuart.service
+apt-get update && apt-get upgrade
 
 ln /opt/kiosk/kiosk.service /lib/systemd/system/kiosk.service
 ln /opt/kiosk/firstboot.service /lib/systemd/system/firstboot.service
