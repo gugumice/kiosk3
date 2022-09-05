@@ -10,9 +10,7 @@ ln /opt/kiosk/kiosk.ini /home/pi/kiosk.ini
 systemctl enable firstboot.service
 
 sed -i '/^# Additional overlays.*/a dtoverlay=pi3-disable-wifi\ndtoverlay=pi3-disable-bt' /boot/config.txt
-#Bug: pycups refuses to install without libcups2-dev
-apt-get --yes install libcups2-dev
-apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages install cups cups-bsd
+apt-get --yes install cups cups-bsd libcups2-dev
 cupsctl --remote-admin --remote-any
 usermod -a -G lpadmin pi
 addgroup watchdog
