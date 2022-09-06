@@ -26,4 +26,4 @@ echo '10.100.20.104   laiks.egl.local' >> /etc/hosts
 chattr +i /etc/hosts
 pip3 --no-input install pycurl pyserial configparser
 pip3 --no-input install pycups
- /usr/sbin/shutdown -r now
+#/usr/sbin/shutdown -r now
