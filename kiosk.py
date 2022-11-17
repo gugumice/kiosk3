@@ -58,11 +58,10 @@ def main():
 
         while not prnObj.running:
             prnObj.start()
+            sleep(delay)
         logging.info('Printer {} on CUPS'.format(prnObj.name))
-        sleep(delay)
         #Indicate printer OK
         ledsObj.off([1])
-        
         ledsObj.pulse([0],fade_in_time=.1,fade_out_time=.1,n=None)
         #Checking if host anewers to cURL requests
         test_url = 'http://{}'.format(config['host'])
@@ -80,7 +79,6 @@ def main():
         #Indicate cURL OK
         ledsObj.off()
         sleep(delay)
-
     parser = argparse.ArgumentParser(description='EGL testing report kiosk')
     parser.add_argument('-c','--config',
                         #type=argparse.FileType('r'),
