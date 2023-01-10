@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo raspi-config nonint do_memory_16
+raspi-config nonint do_memory_16
 systemctl disable bluetooth.service
 systemctl disable hciuart.service
 apt-get update && apt-get -y upgrade
